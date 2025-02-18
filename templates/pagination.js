@@ -1,15 +1,14 @@
-const pagination = document.getElementsByClassName('pagination')
-const firstPageBtn = document.getElementsByClassName('start-btn')
-const prevPageBtn = document.getElementsByClassName('prev-btn')
-const nextPageBtn = document.getElementsByClassName('next-btn')
-const lastPageBtn = document.getElementsByClassName('end-btn')
-
-let totalPage = 0
-let currentPage = 1
+var totalPage = 0
+var currentPage = 1
 
 function initPagination (index, pageSize) {
     const bangumiItem = document.getElementsByClassName('bangumi-container')[index].getElementsByClassName('bangumi-item')
-
+    const pagination = document.getElementsByClassName('pagination')
+    const firstPageBtn = document.getElementsByClassName('start-btn')
+    const prevPageBtn = document.getElementsByClassName('prev-btn')
+    const nextPageBtn = document.getElementsByClassName('next-btn')
+    const lastPageBtn = document.getElementsByClassName('end-btn')
+    
     currentPage = 1
     totalPage = Math.ceil(bangumiItem.length / pageSize)
 
@@ -43,7 +42,11 @@ function initPagination (index, pageSize) {
 function toFirstPage (index, pageSize) {
     if (currentPage === 1) return
     const bangumiItem = document.getElementsByClassName('bangumi-container')[index].getElementsByClassName('bangumi-item')
-
+    const firstPageBtn = document.getElementsByClassName('start-btn')
+    const prevPageBtn = document.getElementsByClassName('prev-btn')
+    const nextPageBtn = document.getElementsByClassName('next-btn')
+    const lastPageBtn = document.getElementsByClassName('end-btn')
+    
     for (let i = (currentPage - 1) * pageSize; i < bangumiItem.length; i++) {
         if (i < currentPage * pageSize) {
             bangumiItem[i].classList.add('hide')
@@ -71,7 +74,11 @@ function toFirstPage (index, pageSize) {
 function toPrevPage (index, pageSize) {
     if (currentPage === 1) return
     const bangumiItem = document.getElementsByClassName('bangumi-container')[index].getElementsByClassName('bangumi-item')
-
+    const firstPageBtn = document.getElementsByClassName('start-btn')
+    const prevPageBtn = document.getElementsByClassName('prev-btn')
+    const nextPageBtn = document.getElementsByClassName('next-btn')
+    const lastPageBtn = document.getElementsByClassName('end-btn')
+    
     for (let i = (currentPage - 1) * pageSize; i < bangumiItem.length; i++) {
         if (i < currentPage * pageSize) {
             bangumiItem[i].classList.add('hide')
@@ -102,7 +109,11 @@ function toPrevPage (index, pageSize) {
 function toNextPage (index, pageSize) {
     if (currentPage === totalPage) return
     const bangumiItem = document.getElementsByClassName('bangumi-container')[index].getElementsByClassName('bangumi-item')
-
+    const firstPageBtn = document.getElementsByClassName('start-btn')
+    const prevPageBtn = document.getElementsByClassName('prev-btn')
+    const nextPageBtn = document.getElementsByClassName('next-btn')
+    const lastPageBtn = document.getElementsByClassName('end-btn')
+    
     for (let i = (currentPage - 1) * pageSize; i < currentPage * pageSize; i++) {
         bangumiItem[i].classList.add('hide')
     }
@@ -133,7 +144,11 @@ function toNextPage (index, pageSize) {
 function toLastPage (index, pageSize) {
     if (currentPage === totalPage) return
     const bangumiItem = document.getElementsByClassName('bangumi-container')[index].getElementsByClassName('bangumi-item')
-
+    const firstPageBtn = document.getElementsByClassName('start-btn')
+    const prevPageBtn = document.getElementsByClassName('prev-btn')
+    const nextPageBtn = document.getElementsByClassName('next-btn')
+    const lastPageBtn = document.getElementsByClassName('end-btn')
+    
     for (let i = (currentPage - 1) * pageSize; i < bangumiItem.length; i++) {
         if (i < currentPage * pageSize) {
             bangumiItem[i].classList.add('hide')
