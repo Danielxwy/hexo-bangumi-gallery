@@ -1,7 +1,7 @@
 /**
  * 切换展示的板块
  *
- * @param {Number} index 板块索引 0: 想看 1: 再看 2: 已看
+ * @param {Number} index 板块索引 0: 再看 1: 已看 2: 想看
  * @param {String} [style] 自定义的当前板块样式
  * @return void
  * @author ChiyukiRuon

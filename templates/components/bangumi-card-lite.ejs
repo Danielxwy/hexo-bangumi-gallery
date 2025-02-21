@@ -1,6 +1,6 @@
 <div class="bangumi-card-lite bangumi-item" style="margin: <%= display_config.margin %>px;">
     <% if (api === 'bgm') { %>
-        <a href="https://bgm.tv/subject/<%= item.subject_id %>" target="_blank">
+        <a target="_blank">
             <img src="<%= display_config.lazyload ? "/bangumi-gallery/img/loading.gif" : `https://lain.bgm.tv/pic/cover/${display_config.image_level}/${item.image}` %>"
                  data-src="<%= `https://lain.bgm.tv/pic/cover/${display_config.image_level}/${item.image}` %>"
                  referrerPolicy="no-referrer" width="110" style="width:110px;"/>

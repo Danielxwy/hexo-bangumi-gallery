@@ -8,14 +8,15 @@
                  referrerPolicy="no-referrer" width="110" style="min-width:110px;max-width: 110px"/>
         </div>
         <div class="bangumi-card-full-right">
-            <div class="bangumi-card-name-full">
+            <div class="bangumi-card-name-full" style="margin-left: 15px">
                 <a href="https://bgm.tv/subject/<%= item.subject_id %>"
-                   target="_blank"><%= item.name_local === '' ? item.name : item.name_local %></a>
+                   target="_blank"
+                   style="font-weight: bold"><%= item.name_local === '' ? item.name : item.name_local %></a>
             </div>
-            <div class="bangumi-card-info-bar">
-                <% if (index === 1 && display_config.progress) { %>
+            <div class="bangumi-card-info-bar" style="margin-top: 10px; margin-bottom: 10px;">
+                <% if (index === 0 && display_config.progress) { %>
                     <div class="bangumi-card-info-item">
-                        <div style="font-weight: normal; margin-bottom: 5px"><%= __('progress') %></div>
+                        <div style="font-weight: normal"><%= __('progress') %></div>
                         <div><%= item.ep_status %> / <%= item.eps %></div>
                     </div>
                 <% } else { %>
@@ -27,7 +28,7 @@
                 <% } %>
                 <div class="separator"></div>
                 <div class="bangumi-card-info-item mobile-hide">
-                    <div style="font-weight: normal; margin-bottom: 5px"><%= __('airDate') %></div>
+                    <div style="font-weight: normal"><%= __('airDate') %></div>
                     <% if (item.date) { %>
                         <div><%= item.date %></div>
                     <% } else { %>
@@ -36,11 +37,11 @@
                 </div>
                 <div class="separator mobile-hide"></div>
                 <div class="bangumi-card-info-item">
-                    <div style="font-weight: normal; margin-bottom: 5px"><%= __('score') %></div>
+                    <div style="font-weight: normal"><%= __('score') %></div>
                     <div><%= item.score %></div>
                 </div>
             </div>
-            <div class="bangumi-card-summary" style="font-weight: lighter"><%= item.summary %></div>
+            <div class="bangumi-card-summary" style="font-weight: lighter; margin: 10px 15px; text-align: left"><%= item.summary %></div>
         </div>
     </div>
 <% } %>

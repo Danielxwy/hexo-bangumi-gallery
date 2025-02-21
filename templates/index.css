@@ -40,8 +40,11 @@
     padding: 3px;
     border-radius: 5px;
     margin-right: 10px;
-    font-size: large;
+}
+
+.tab-btn a {
     font-weight: bold;
+    font-size: large;
 }
 
 .tab-btn:hover {
@@ -68,8 +71,23 @@
 .bangumi-name {
     text-align: center;
     font-size: small;
+    font-weight: bold;
     color: #939393;
     margin-top: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.bangumi-name:hover {
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: #51aded;
+}
+
+.bangumi-name:focus {
+    outline: 0;
+    text-decoration: none;
 }
 
 .bangumi-card-lite {
@@ -136,8 +154,34 @@
     margin-right: 5px;
 }
 
+.page-item a {
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-item a:hover {
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: #51aded !important;
+}
+
+.page-item a:focus {
+    outline: 0;
+    text-decoration: none;
+}
+
 @media (max-width: 500px) {
     .mobile-hide {
         display: none !important;
     }
+}
+
+#lite-mode {
+    margin-bottom: 15px;
+}
+
+.page-info {
+    user-select: none;
 }

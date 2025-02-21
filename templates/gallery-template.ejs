@@ -8,13 +8,13 @@
 </style>
 <div class="tabs">
     <div class="tab-btn" onclick="tabClick(0); initPagination(0, <%= display_config.page_size %>)">
-        <a href="javascript:void(0);" rel="external" target="_self" style="font-weight: bold"><%= __('watching') %> (<%= watching.length %>)</a>
+        <a href="javascript:void(0);" rel="external" target="_self"><%= __('watching') %> (<%= watching.length %>)</a>
     </div>
     <div class="tab-btn" onclick="tabClick(1); initPagination(1, <%= display_config.page_size %>)">
-        <a href="javascript:void(0);" rel="external" target="_self" style="font-weight: bold"><%= __('completed') %> (<%= completed.length %>)</a>
+        <a href="javascript:void(0);" rel="external" target="_self"><%= __('completed') %> (<%= completed.length %>)</a>
     </div>
     <div class="tab-btn" onclick="tabClick(2); initPagination(2, <%= display_config.page_size %>)">
-        <a href="javascript:void(0);" rel="external" target="_self" style="font-weight: bold"><%= __('planToWatch') %> (<%= planToWatch.length %>)</a>
+        <a href="javascript:void(0);" rel="external" target="_self"><%= __('planToWatch') %> (<%= planToWatch.length %>)</a>
     </div>
 </div>
 <% if (display_config.size === 'lite') { %>
